@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "../components/Footer";
+import Records from "../components/Recorders";
 import Lists from "../components/Lists";
 import Main from "../components/Main";
 import Navbar from "../components/Navbar";
@@ -16,9 +18,11 @@ const Layout = () => {
         <Main />
       </div>
       <div className="layout__recorders">
-        <Lists />
+        <Records />
       </div>
-      <div className="layout__footer">Footer</div>
+      <div className="layout__footer">
+        <Footer />
+      </div>
     </div>
   );
 };

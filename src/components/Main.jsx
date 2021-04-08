@@ -1,22 +1,53 @@
 import React from "react";
-import Button from "./Button";
 
 const Main = () => {
+  const [taskName, setTaskName] = React.useState("");
+
   return (
-    <div className="taskMain">
-      <h2 className="taskMain__title">Crea una nueva tarea</h2>
-      <h5 className="taskMain__subtitle">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </h5>
-      <div>
-        <form>
-          <div className="taskForm">
-            <input type="text" />
-            <input type="number" />
-            <textarea rows="6" />
-            <Button name="Agregar tarea" color="primary"></Button>
-          </div>
-        </form>
+    <div>
+      <div className="tabs is-right">
+        <ul>
+          <li className="is-active">
+            <a>Pictures</a>
+          </li>
+          <li>
+            <a>Music</a>
+          </li>
+          <li>
+            <a>Videos</a>
+          </li>
+          <li>
+            <a>Documents</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="field">
+        <h3 class="title is-3">Crea una nueva tarea</h3>
+        <div className="control">
+          <input
+            className="input"
+            type="text"
+            placeholder="Nombre de la tarea"
+            onChange={(e) => setTaskName(e.target.value)}
+          />
+        </div>
+        <div className="control">
+          <input
+            className="input"
+            type="number"
+            placeholder="Escribe la fecha de finalización"
+          />
+        </div>
+        <textarea
+          class="textarea"
+          placeholder="Puedes escribir una descripción para identificar la tarea..."
+        ></textarea>
+        <p className="help">This is a help text</p>
+      </div>
+      <div class="buttons">
+        <button className="button is-primary">Agregar</button>
+        <button className="button is-link">Editar</button>
       </div>
     </div>
   );

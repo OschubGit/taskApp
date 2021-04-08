@@ -1,3 +1,12 @@
+.panel {
+  height: 100%;
+  box-shadow: none;
+  border: 1px solid #2f496319;
+
+  .panel-heading {
+    border-radius: 0px;
+  }
+}
 .tasks {
   display: flex;
   flex-direction: column;
